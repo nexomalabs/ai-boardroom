@@ -1,0 +1,22 @@
+# Secrets: never commit these
+.env
+.env.*
+!.env.example
+
+# Claude Code: personal settings and hook state
+.claude/settings.local.json
+.claude/hooks/.state/
+
+# Build output
+target/
+build/
+dist/
+node_modules/
+.gradle/
+
+# Editors and OS
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
