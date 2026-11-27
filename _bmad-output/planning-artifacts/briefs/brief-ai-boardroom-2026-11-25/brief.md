@@ -49,9 +49,9 @@ The five jobs form one loop: **Sense** (jobs 1 and 2), **Decide** (3), **Commit*
 
 ## Product bets
 
-1. **Walk into the money conversation with the honest total and priced options.** The honest total is the most likely date and its range. When scope grows as fast as work gets done, it's "no finish date at this pace." Leaders look away from warnings they can't act on. So a warning goes out at once with the cost of waiting, and two or three priced options attach within days. *Question it answers:* "When are we done, and what would it cost to change that?"
+1. **Walk into the money conversation with the honest total and priced options.** The honest total is the most likely date and its range. When scope grows as fast as work gets done, it's "no finish date at this pace." Leaders look away from warnings they can't act on. So a warning goes out at once with the cost of delay, and two or three priced options attach within days. *Question it answers:* "When are we done, and what would it cost to change that?"
 2. **The Monday queue.** Three to five decisions that need the leader this week, ranked by consequence and deadline, plus *Doesn't need you, and why*. The test: if we can't name a decision a VP makes every week that this improves, we're building the wrong thing. *Question it answers:* "What do I have to decide this week, and what can I safely leave?"
-3. **No silent drift, and no silent ignoring.** Every move of a date or budget becomes a one-step recorded decision: accept the new date, cut scope or add capacity. *You can ignore a warning; you just can't ignore it quietly.* "Not now" is a one-step deferral. It shows its reason, the cost of waiting (counted by the engine from day one), the condition that ends the wait, the tripwire that forces an earlier decision, and an owner with a review date. That's what lets a CEO read it as judgment rather than neglect. The observability consolidation is the worked example (see the addendum). *Question it answers:* "Who agreed to this slip, or this wait, and why?"
+3. **No silent drift, and no silent ignoring.** Every move of a date or budget becomes a one-step recorded decision: accept the new date, cut scope or add capacity. *You can ignore a warning; you just can't ignore it quietly.* "Not now" is a one-step deferral. It shows its reason, the cost of delay (counted by the engine from day one), the condition that ends the wait, the tripwire that forces an earlier decision, and an owner with a review date. That's what lets a CEO read it as judgment rather than neglect. The observability consolidation is the worked example (see the addendum). *Question it answers:* "Who agreed to this slip, or this wait, and why?"
 4. **Flags nobody deletes and everybody explains.** The same flag reaches the leader and the director at once, and goes into the CEO brief with the leader's response. Directors can raise a flag before any rule fires, and the record shows when. That's credit for early bad news, kept as a timestamp, never a leaderboard. *Question it answers:* "What is green hiding, and what does the owner say about it?"
 5. **Code for numbers, a board for arguments.** Tested code produces every figure. A validator rejects any AI-written number that doesn't trace to an engine fact. The advisor board argues by fixed rules:
    - Each advisor takes a position before seeing the others.
@@ -71,12 +71,12 @@ The data each bet needs, which parts are code versus AI judgment, and the full b
 - **It starts from the decision and the money, not from engineering activity.** Engineering analytics tools (Jellyfish, LinearB, Swarmia, DX, Faros) measure how engineering works. Portfolio tools (Planview, Jira Align) plan where the money goes.
 - **The board argues and the leader decides,** with dissent kept on the record.
 - **Leaders grade their own calls.** Review closes every loop, against an append-only record the leader can't quietly rewrite.
-- **We're honest about the overlap.** Cortex sells an "AI chief of staff for engineering leaders." Jellyfish now sells to CFOs. Planview markets AI that drafts budget reallocations. The difference has to show in one demo before the PRD, and it hasn't been shown yet.
+- **We're honest about the overlap.** Cortex markets an "AI chief of staff" use case built on its MCP server. Jellyfish now sells to CFOs. Planview markets AI that drafts budget reallocations. Before the PRD, a written comparison from public material has to show what each of them can and can't show for the crisis week. A live demo comparison comes later, as a gate for the public demo. Neither exists yet.
 
 ## Riskiest assumptions
 
 1. **The leader wants to know.** The VP is the buyer, and if the VP doesn't want bad news, accuracy doesn't matter. The design answers this in two ways.
-   - Leaders look away from warnings they can't act on, so every warning carries the cost of waiting, and options follow within days.
+   - Leaders look away from warnings they can't act on, so every warning carries the cost of delay, and options follow within days.
    - [Product] records reasoning, not inaction. A priced, dated deferral is the VP's defense in the CEO meeting; silence is the liability.
 
    Test: walk five real Directors or VPs through the crisis week. Ask whether they'd buy a product that keeps their deferrals on the record, and what they'd stop using to make room for it.
@@ -89,7 +89,7 @@ Whether a real VP would pay underlies all three, and the same walkthrough tests 
 
 - Individual performance scores of any kind, including scores of how accurate each director's forecasts were. Team-level metrics only.
 - Leaderboards. Credit for raising a risk early is a timestamp on the flag.
-- Read receipts. [Product] never records who viewed a flag. It records the flag's age, the cost of waiting and the choices people make.
+- Read receipts. [Product] never records who viewed a flag. It records the flag's age, the cost of delay and the choices people make.
 - A project tracker or Jira replacement: no tasks, boards or sprint planning.
 - A metrics dashboard or metrics wall. Every view is tied to a decision or a flag.
 - A portfolio roll-up.
@@ -124,10 +124,10 @@ The Tallmast Q4 crisis week, full-finance version (S2E5), runs end to end from a
    - The director sees each flag at the same moment as the VP and can add context and options.
    - Nobody can delete a flag.
    - Director-raised flags show their timestamp.
-   - Deferred flags keep counting their cost of waiting.
+   - Deferred flags keep counting their cost of delay.
    - The CEO brief lists every rule that fired, with the VP's response.
 7. **No number comes from the AI.** The validator rejects any AI-written number that doesn't trace to an engine fact, and a test proves it.
-8. **The demo blockers listed in the addendum are cleared.** These include one demo that shows how [Product] differs from Cortex, Planview and Jellyfish, which has to happen before the PRD.
+8. **The public-demo blockers listed in the addendum are cleared.** These include a live demo comparison with Cortex, Planview and Jellyfish.
 9. **Review closes the loop.** An assumption behind a crisis-week decision breaks, and the decision goes back into the queue. On the review date, the "30 days later" record grades the decision.
 
 ## Scope

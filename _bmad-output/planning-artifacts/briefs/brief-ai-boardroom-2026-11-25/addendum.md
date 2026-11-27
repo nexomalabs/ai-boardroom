@@ -13,9 +13,9 @@ Detail that earned a place but doesn't fit in the brief, kept here for the PRD a
 
 | Bet | Executive question | Data it needs | Code (calculated, tested) | AI judgment |
 |---|---|---|---|---|
-| 1. The honest total and priced options | When are we done, and what would it cost to change that? | Scope added and finished per sprint; budget lines; commitments; estimates with who and when | Most likely date and range; "no finish date at this pace"; cost of waiting; cost of each option | Drafting the options; explaining their consequences |
+| 1. The honest total and priced options | When are we done, and what would it cost to change that? | Scope added and finished per sprint; budget lines; commitments; estimates with who and when | Most likely date and range; "no finish date at this pace"; cost of delay; cost of each option | Drafting the options; explaining their consequences |
 | 2. The Monday queue | What do I have to decide this week, and what can I safely leave? | Open decisions with cost of delay, deadlines, postponement counts and deferral conditions | Which decisions qualify; the ranking by consequence and deadline; the reason each one is on *Doesn't need you* | None in the ranking; may summarize each item |
-| 3. No silent drift or ignoring | Who agreed to this slip, or this wait, and why? | History of dates and budgets; decision records; the five parts of each deferral | Detecting a moved date or budget; requiring a record; counting the cost of waiting; checking tripwires | Suggesting the question to ask the owner |
+| 3. No silent drift or ignoring | Who agreed to this slip, or this wait, and why? | History of dates and budgets; decision records; the five parts of each deferral | Detecting a moved date or budget; requiring a record; counting the cost of delay; checking tripwires | Suggesting the question to ask the owner |
 | 4. Flags nobody deletes | What is green hiding, and what does the owner say? | Reported status; incidents by severity; change failure; capacity; on-call pages; unplanned work | Rule evaluation against versioned thresholds; timestamps | Suggesting a question for the director; summarizing their context |
 | 5. Code for numbers, a board for arguments | Can I put this in front of the board, and who disagreed? | Budget, actuals, commitments; the controller's capitalization policy; each advisor's position | Every number; the validator; quorum counting; round limits; the hash chain | Each advisor's argument; challenging assumptions; naming missing information; the CEO brief's prose around engine values |
 
@@ -26,7 +26,7 @@ Detail that earned a place but doesn't fit in the brief, kept here for the PRD a
 - "no finish date at this pace"
 - alert counts
 - the Monday queue's ranking, and what lands on *Doesn't need you* (the rules decide this, not the AI)
-- the cost of waiting, and tripwire checks
+- the cost of delay, and tripwire checks
 - every number in the CEO brief
 
 **Where AI adds value:**
@@ -59,7 +59,7 @@ The board rules are decided. The right-hand column lists what the PRD still has 
 A deferral is one step, and it must show these five parts:
 
 1. **The reason.**
-2. **The cost of waiting**, counted by the engine from day one.
+2. **The cost of delay**, counted by the engine from day one.
 3. **The condition that ends the wait.**
 4. **The tripwire that forces an earlier decision.**
 5. **An owner with a review date.**
@@ -67,7 +67,7 @@ A deferral is one step, and it must show these five parts:
 Worked example (Tallmast), the observability consolidation:
 - **Owner:** Mei Lin.
 - **Condition:** the migration cutover is stable and the change freeze has ended (Jan 5).
-- **Cost of waiting:** about $15K a month.
+- **Cost of delay:** about $15K a month.
 - **Tripwire:** a vendor renewal date that falls before then.
 
 The decision-debt rule keeps it off the VP's queue: it was postponed once, its cost of delay is under $25K a month, and it has no deadline within 90 days. So it sits on *Doesn't need you, and why*.
@@ -114,7 +114,7 @@ From `docs/company-context.md`:
 
 ## Fields a human must keep current
 
-This is the first list. Minutes per week are still to be measured, and that measurement blocks the demo.
+This is the first list. Minutes per week are still to be measured, and that measurement blocks the public demo.
 
 - How many engineers have working knowledge of each critical system (a count, never names).
 - How many times each decision was postponed, and its review dates.
@@ -122,15 +122,18 @@ This is the first list. Minutes per week are still to be measured, and that meas
 - The success criteria and assumptions for each decision.
 - The reported status of each initiative, taken from status reports.
 - Estimates of size (team-weeks) and cost, with who made each one and when.
-- For each "Not now" deferral: the reason, the condition that ends the wait, the tripwire, the owner and the review date. The engine counts the cost of waiting.
+- For each "Not now" deferral: the reason, the condition that ends the wait, the tripwire, the owner and the review date. The engine counts the cost of delay.
 - Departures that change a key-person count (count only).
 
 ## What each gap blocks (decided 2026-11-25)
 
+**Blocks the PRD:**
+- A written comparison from public material: what Cortex, Planview and Jellyfish can and can't show for the crisis week.
+
 **Blocks the public demo (Tallmast data):**
 - Estimates visibly marked, with who made them and when.
 - The list of fields a human must keep current, with minutes per week.
-- One demo showing the difference from Cortex, Planview and Jellyfish, before the PRD.
+- A live demo comparison with Cortex, Planview and Jellyfish.
 
 **Blocks the first paid pilot (real data):**
 - Honest dates on messy data.
@@ -139,14 +142,14 @@ This is the first list. Minutes per week are still to be measured, and that meas
 - Evidence that a real VP would pay.
 
 **Fast-follow:**
-- Alert volume. Measure it on the 26 seeded weeks before the demo.
+- Alert volume. Measure it on the 26 seeded weeks before the public demo.
 
 **Accepted trade-off:**
 - A VP managing by dashboard instead of talking to directors. Written rule: [Product] supports the conversation and never replaces it.
 
 ## Why there are no read receipts (decided 2026-11-25)
 
-The brainstorm first proposed recording "seen, no action," so that ignoring a flag couldn't happen quietly. That would put a read receipt on the VP: the surveillance the director FAQ worries about, pointed upward. It would also create a discoverable "you knew on this date" line. Instead, [Product] records the flag's age and the cost of waiting, which are facts about the problem, and explicit choices, which are facts about the decision. That keeps "you can't ignore it quietly" without reading anyone's screen. A VP won't buy a record of inaction, but may buy a record of reasoning.
+The brainstorm first proposed recording "seen, no action," so that ignoring a flag couldn't happen quietly. That would put a read receipt on the VP: the surveillance the director FAQ worries about, pointed upward. It would also create a discoverable "you knew on this date" line. Instead, [Product] records the flag's age and the cost of delay, which are facts about the problem, and explicit choices, which are facts about the decision. That keeps "you can't ignore it quietly" without reading anyone's screen. A VP won't buy a record of inaction, but may buy a record of reasoning.
 
 ## Ideas considered but not chosen
 
@@ -171,7 +174,7 @@ The brainstorm first proposed recording "seen, no action," so that ignoring a fl
   - Faros.
   - Gartner published a Magic Quadrant for Developer Productivity Insight Platforms in May 2026.
 - **Portfolio tools:** Planview, which markets AI that drafts budget reallocation options, and Jira Align.
-- **Closest to our job:** Cortex's "AI chief of staff for engineering leaders," launched October 2025.
+- **Closest to our job:** Cortex markets an "AI chief of staff" use case built on its MCP server, announced October 2025. It isn't a separate product.
 - **Price reference:** one secondhand estimate puts engineering analytics tools at $50K–$120K a year for 50–150 seats.
 - **Developer backlash** targets scoring individuals and tying numbers to reviews, more than team-level measurement.
 
